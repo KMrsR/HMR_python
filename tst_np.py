@@ -1,5 +1,5 @@
 import numpy as np
-'''
+
 a = nвапвавпp.array([[1, 2, 3],[4, 5, 6]]) 
 print(a)
 
@@ -48,7 +48,7 @@ print(np.random.sample(3))
 print(np.random.random_integers(0, 3, 10))
 print(np.random.randint(0, 1000, (2, 10)))
 print(np.random.uniform(11, 56, (4, 4)))
-'''
+
 #****************************
 
 #print(np.random.permutation(10))
