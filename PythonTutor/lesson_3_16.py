@@ -8,16 +8,10 @@ Y копеек. Определите размер вклада через год
 год в рублях и копейках. Дробная часть копеек отбрасывается.
 '''
 #**************************************************
-import math
 p=int(input())
 x=int(input())
 y=int(input())
-
-kop=x*100+y
-perc=kop*(1+p/100)
-
-print(int(perc//100))
-print(math.ceil(int(perc%100)))
-
-
+after=(x*100+y)*(100+p)/100
+print(int(after//100))
+print(int(after%100))
 
