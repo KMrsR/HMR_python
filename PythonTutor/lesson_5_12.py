@@ -4,11 +4,9 @@
 '''
 #**************************************************
 
-s ="Python"#input()
+s ="0123456789"#input()
 a=len(s)
 for i in range(0,a):
-	if i%3==0:
-		print(i)
-		str1=s[i]
-		s=s.replace(str1,'',1)
-print(s)
+	if i%3==0 and i/3>0:
+		s=s.replace(s[i],'@')
+print(s.replace('@',''))
