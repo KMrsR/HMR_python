@@ -25,7 +25,7 @@ scatter1 = plt.scatter(x_f, y_f)
 x_cur=x_f
 y_cur=y_f
 
-for number in range(0,1500):
+for number in range(0,5000):
 	rnd_num=random.randint(1,7)
 	if rnd_num==1 or rnd_num==2:
 		x_new=x_cur/2

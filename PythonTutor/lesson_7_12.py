@@ -14,19 +14,20 @@
 Правильный ответ
 7 6 0 5 4 3 2 1
 ''' 
-a = [7,6,5,4,3,2,1]#input().split()
-#for i in range(len(a)):
-#    a[i] = int(a[i])
-k=2#input()
-c=0#input()
-
-print(a)
+a = input().split()
+for i in range(len(a)):
+    a[i] = int(a[i])
+b = input().split()
+for i in range(len(b)):
+    b[i] = int(b[i])
+k=b[0]
+c=b[1]
 
 a.append(0)
 for i in range(len(a)-1,k,-1):
 	a[i]=a[i-1]
 a[k]=c
 
-#for i in range(len(a)):
-#    print(a[i],end=' ')
+for i in range(len(a)):
+    print(a[i],end=' ')
 
