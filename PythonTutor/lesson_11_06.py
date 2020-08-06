@@ -1,47 +1,26 @@
 '''
 Условие
-Дан текст: в первой строке записано количество строк в тексте, а затем сами строки. 
-Выведите все слова, встречающиеся в тексте, по одному на каждую строку. Слова должны быть 
-отсортированы по убыванию их количества появления в тексте, а при одинаковой частоте 
-появления — в лексикографическом порядке.
-
-Указание. После того, как вы создадите словарь всех слов, вам захочется отсортировать 
-его по частоте встречаемости слова. Желаемого можно добиться, если создать список, 
-элементами которого будут кортежи из двух элементов: частота встречаемости слова и 
-само слово. Например, [(2, 'hi'), (1, 'what'), (3, 'is')]. Тогда стандартная сортировка 
-будет сортировать список кортежей, при этом кортежи сравниваются по первому элементу, а 
-если они равны — то по второму. Это почти то, что требуется в задаче.
+Дан список стран и городов каждой страны. Затем даны названия городов. Для 
+каждого города укажите, в какой стране он находится.
 ''' 
-wd = {}
+countries = {}
 for i in range(int(input())):
-    line = input().split()
-    for word in line:
-        wd[word] = wd.get(word, 0) + 1
-        
-wdl=[]
-for key in wd.keys():
-    wdl.append((wd[key],str(key)))
+    country, *city = input().split()
+    countries[country] = city
 
-#print(wd)
-#print(wdl)
-wdl2=sorted(wdl, key=lambda x: (-x[0], x[1]))
-
-for i in range(len(wdl2)):
-    print(wdl2[i][1])
-
-
+for i in range(int(input())):
+    f=input()
+    for city in countries.keys():
+        if f in countries[city]:
+            print(city) 
 
 '''
-from collections import Counter
-
-words = []
-for _ in range(int(input())):
-    words.extend(input().split())
-
-counter = Counter(words)
-pairs = [(-pair[1], pair[0]) for pair in counter.most_common()]
-words = [pair[1] for pair in sorted(pairs)]
-print('\n'.join(words))
-
-
+motherland = {}
+for i in range(int(input())):
+    country, *cities = input().split()
+    for city in cities:
+        motherland[city] = country
+        
+for i in range(int(input())):
+    print(motherland[input()])
 '''
