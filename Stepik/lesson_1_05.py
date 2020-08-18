@@ -29,3 +29,17 @@ x = MoneyBox(15,vb)
 x.add(5)
 x.add(9)
 x.add(3)
+
+'''
+class MoneyBox:
+    def __init__(self, capacity):
+        self.count_coin = 0
+        self.capacity = capacity
+
+    def can_add(self, v):
+        return self.count_coin + v <= self.capacity
+
+    def add(self, v):
+        if self.can_add(v):
+            self.count_coin += v
+'''
